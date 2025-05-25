@@ -1,0 +1,16 @@
+{
+    "No Finding": 0.30000000000000004,
+    "Enlarged Cardiomediastinum": 0.30000000000000004,
+    "Cardiomegaly": 0.30000000000000004,
+    "Lung Opacity": 0.25000000000000006,
+    "Lung Lesion": 0.30000000000000004,
+    "Edema": 0.30000000000000004,
+    "Consolidation": 0.30000000000000004,
+    "Pneumonia": 0.30000000000000004,
+    "Atelectasis": 0.30000000000000004,
+    "Pneumothorax": 0.30000000000000004,
+    "Pleural Effusion": 0.30000000000000004,
+    "Pleural Other": 0.30000000000000004,
+    "Fracture": 0.30000000000000004,
+    "Support Devices": 0.30000000000000004
+}
