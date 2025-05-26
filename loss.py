@@ -2,6 +2,18 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+def get_alpha_vector(labels):
+    """
+    Compute alpha per class based on class frequency.
+    Rare classes get higher alpha.
+    """
+    pos_counts = labels.sum(axis=0)
+    # neg_counts = labels.shape[0] - pos_counts
+    alpha = 1.0 / (pos_counts + 1e-6)  # Avoid division by zero
+    alpha = alpha / alpha.sum()  # Normalize to sum to 1 (optional)
+    return torch.tensor(alpha, dtype=torch.float32)
+
+
 class FocalLoss(nn.Module):
     def __init__(self, alpha=None, gamma=2.0, reduction='mean'):
         """
